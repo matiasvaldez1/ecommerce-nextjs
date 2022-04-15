@@ -9,7 +9,7 @@ export default function CardCheckout({item}) {
       <div className='flex justify-between bg-gray-100 dark:bg-gray-400'>
       <div className='flex'>
           <div>
-            <img className='h-32 w-32' src={item.image}/>
+            <img className='h-32 w-32' src={item.image} alt={item.title}/>
           </div>
           <div className='px-4'>
             <h1>{item.title}</h1>

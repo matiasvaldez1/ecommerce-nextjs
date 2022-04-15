@@ -7,7 +7,6 @@ import Router from 'next/router'
 
 export default function Navbar() {
 	const {data : session} = useSession()
-	console.log(session)
 	const [isOn, setIsOn] = useState(false)
 	const toggleSwitch = () => {
 		setIsOn(!isOn);

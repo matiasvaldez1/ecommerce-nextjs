@@ -7,14 +7,13 @@ import axios from 'axios'
 import Footer from '../components/footer'
 import { NEXT_URL } from '../config/config'
 
-export default function products({products}) {
+export default function Products({products}) {
     const [productsState,setProductsState] = useState(products)
     const [type,setType] = useState("")
     const [typeR,setTypeR] = useState("")
     const [typeAZ,setTypeAZ] = useState("")
 
     const handlePrice = (e) =>{
-        console.log(e.target.value)
         if(e.target.value === "asc"){
             setProductsState(() => productsState.sort(function(a,b){
                 if(a.price > b.price) return 1
@@ -33,7 +32,6 @@ export default function products({products}) {
     }
 
     const handleRating = (e) =>{
-        console.log(e.target.value)
         if(e.target.value === "ascR"){
             setProductsState(() => productsState.sort(function(a,b){
                 if(a.rating.rate > b.rating.rate) return 1
@@ -52,7 +50,6 @@ export default function products({products}) {
     }
 
     const handleAZ = (e) =>{
-        console.log(e.target.value)
         if(e.target.value === "ascAZ"){
             setProductsState(() => productsState.sort(function(a,b){
                 if(a.title > b.title) return 1

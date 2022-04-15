@@ -3,7 +3,6 @@ import {useSession} from 'next-auth/react'
 import Navbar from '../components/Navbar'
 import { signOut } from 'next-auth/react'
 import { useRouter } from 'next/router'
-import { NEXT_URL } from '../config/config'
 
 export default function Profile() {
     const {data:session} = useSession()
@@ -27,7 +26,7 @@ export default function Profile() {
                     <div className='text-center'>
                         <p>{session && session.user.name}</p>
                         <p>{session && session.user.email}</p>
-                        <button onClick={() => signOut({ callbackUrl: `${NEXT_URL}/home` })} className='mt-12 py-2 px-3 bg-red-500 text-white rounded-md'>Log out</button>
+                        <button onClick={() => signOut({ callbackUrl: `http://localhost:3000/home` })} className='mt-12 py-2 px-3 bg-red-500 text-white rounded-md'>Log out</button>
                     </div>
                 </div>
             </div>

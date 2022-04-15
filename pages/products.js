@@ -5,7 +5,6 @@ import Link from 'next/link'
 import CardHome from '../components/CardHome'
 import axios from 'axios'
 import Footer from '../components/Footer'
-import { NEXT_URL } from '../config/config'
 
 export default function Products({products}) {
     const [productsState,setProductsState] = useState(products)
@@ -109,7 +108,7 @@ export default function Products({products}) {
 }
 
 export async function getStaticProps(){
-    const res = await axios.get(`${NEXT_URL}/api/productslist`)
+    const res = await axios.get(`/api/productslist`)
     const products = await res.data
   
     return {

@@ -1,6 +1,6 @@
 import React,{useContext,useState,useEffect} from 'react'
 import NavBar from '../components/Navbar'
-import { CartContext } from '../context/cartContext'
+import { CartContext } from '../context/CartContext'
 import Link from 'next/link'
 import CardHome from '../components/CardHome'
 import axios from 'axios'

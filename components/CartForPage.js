@@ -1,6 +1,6 @@
 import React,{useContext} from 'react'
 import CardCheckout from './CardCheckout'
-import { CartContext } from '../context/cartContext'
+import { CartContext } from '../context/CartContext'
 import { useRouter } from 'next/router'
 import Navbar from './Navbar'
 import Link from 'next/link'

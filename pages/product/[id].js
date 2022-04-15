@@ -1,7 +1,7 @@
 import React,{useContext,useState,useEffect} from 'react'
 import axios from 'axios'
 import Navbar from '../../components/Navbar'
-import { CartContext } from '../../context/cartContext';
+import { CartContext } from '../../context/CartContext';
 import { NEXT_URL } from '../../config/config';
 
 export default function ProductById({product}) {

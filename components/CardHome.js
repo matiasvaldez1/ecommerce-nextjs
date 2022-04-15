@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React, {useState,useContext} from 'react'
-import {CartContext} from '../context/cartContext'
+import {CartContext} from '../context/CartContext'
 import { toast,ToastContainer } from 'react-toastify'
 
 export default function CardHome({title,price,category,image,rate,product,id}) {

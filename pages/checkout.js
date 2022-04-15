@@ -1,5 +1,5 @@
 import React,{useEffect,useContext} from 'react'
-import {CartContext} from '../context/cartContext'
+import {CartContext} from '../context/CartContext'
 import NavBar from '../components/Navbar'
 import CardCheckout from '../components/CardCheckout'
 import { useRouter } from 'next/router'

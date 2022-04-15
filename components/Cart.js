@@ -1,6 +1,6 @@
-import { useContext, useEffect, useState } from "react";
+import React,{ useContext, useEffect, useState } from "react";
 import { ItemCart } from "./ItemCart";
-import { CartContext } from "../context/cartContext";
+import { CartContext } from "../context/CartContext";
 import Link from "next/link";
 
 export default function Cart(){

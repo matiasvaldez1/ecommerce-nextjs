@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import { SessionProvider } from "next-auth/react"
-import CartProvider from '../context/cartContext'
+import CartProvider from '../context/CartContext'
 import Footer from '../components/footer'
 
 export default function App({

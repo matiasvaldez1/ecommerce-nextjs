@@ -6,6 +6,7 @@ import HeroHome from "../components/HeroHome"
 import { useSession } from "next-auth/react"
 import CartContext from "../context/CartContext"
 import Footer from "../components/footer"
+import { NEXT_URL } from "../config/config"
 
 export default function App({products}) {
   return (
@@ -18,7 +19,7 @@ export default function App({products}) {
   )
 }
 export async function getStaticProps(){
-  const res = await axios.get('http://localhost:3000/api/productslist')
+  const res = await axios.get(`${NEXT_URL}/api/productslist`)
   const products = await res.data
 
   return {

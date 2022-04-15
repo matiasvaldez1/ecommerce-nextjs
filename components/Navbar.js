@@ -7,12 +7,12 @@ import Router from 'next/router'
 
 export default function Navbar() {
 	const {data : session} = useSession()
+	console.log(session)
 	const [isOn, setIsOn] = useState(false)
 	const toggleSwitch = () => {
 		setIsOn(!isOn);
 		document.documentElement.classList.toggle("dark");
 	};
-
   return (
 <div className="flex items-center h-20 px-6 justify-between shadow-sm relative z-50 bg-white dark:bg-slate-800 dark:text-white">
 	<Link href={"/home"}>
@@ -34,9 +34,15 @@ export default function Navbar() {
 			{isOn ? "🌞" : "🌙"}
 		</button>
 		<Cart />
+		{session ?
 		<Link href={"/profile"}>
 		<div className="cursor-pointer my-2 relative rounded-full w-12 h-12"> <img src={session && session.user.image} className="absolute left-0 top-0 w-full h-full rounded-full object-cover" /> </div>
 		</Link>
+		: (
+			<div className='cursor-pointer bg-red-600 text-white p-2 rounded-sm'>
+				<Link href={"/login"}>Sign up</Link>
+			</div>)
+		}
 	</div>
 </div>
   )

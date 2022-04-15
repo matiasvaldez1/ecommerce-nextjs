@@ -6,7 +6,7 @@ const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState(() => {
         try {
         const productosEnLocalStorage = localStorage.getItem("cartProducts");
-        return productosEnLocalStorage ? JSON.parse(productosEnLocalStorage) : ["No products"];
+        return productosEnLocalStorage ? JSON.parse(productosEnLocalStorage) : [];
         } catch (error) {
         return [];
         }

@@ -26,6 +26,7 @@ export default function ProductsGrid({products}) {
                     category={e.category}
                     title={e.title}
                     rate={e.rating.rate}
+                    id={e.id}
                     />
                     )
                 }) : null}

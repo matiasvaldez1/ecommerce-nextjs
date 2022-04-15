@@ -14,7 +14,11 @@ export default function CartPage() {
       }, 3000);
       window.localStorage.removeItem("cartProducts")
     }
-
+    useEffect(() => {
+      if(cartItems.length === 0){
+      router.push("/home")}
+    }, [cartItems])
+    
     const total = cartItems?.reduce(
       (previous, current) => previous + current.amount * current.price,
       0

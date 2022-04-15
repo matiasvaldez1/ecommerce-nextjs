@@ -6,17 +6,19 @@ export default function CardCheckout({item}) {
 
   return (
     <>
-      <div className='flex flex-row bg-gray-100 dark:bg-gray-400 w-full'>
+      <div className='flex justify-between bg-gray-100 dark:bg-gray-400'>
+      <div className='flex'>
+          <div>
+            <img className='h-32 w-32' src={item.image}/>
+          </div>
+          <div className='px-4'>
+            <h1>{item.title}</h1>
+            <p>${item.price}</p>
+            <p>Amount: {item.amount}</p>
+            <p>Total: ${item.price * item.amount}</p>
+          </div>
+      </div>
         <div>
-          <img className='h-32 w-32' src={item.image}/>
-        </div>
-        <div className='px-4'>
-          <h1>{item.title}</h1>
-          <p>${item.price}</p>
-          <p>Amount: {item.amount}</p>
-          <p>Total: ${item.price * item.amount}</p>
-        </div>
-        <div className='block justify-end'>
           <button onClick={() => DeleteItemToCart(item.id)}>❌</button>
         </div>
       </div>

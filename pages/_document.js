@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html>
       <Head>
-          <title>Ecommerce</title>
+          <title>LoudropStore</title>
           <meta name="description" content="Ecommerce app" />
           <link rel="icon" href="/favicon.ico" />
       </Head>

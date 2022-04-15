@@ -4,7 +4,7 @@ import { CartContext } from '../context/CartContext'
 import Link from 'next/link'
 import CardHome from '../components/CardHome'
 import axios from 'axios'
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 import { NEXT_URL } from '../config/config'
 
 export default function Products({products}) {

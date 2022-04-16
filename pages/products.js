@@ -5,6 +5,7 @@ import Link from 'next/link'
 import CardHome from '../components/CardHome'
 import axios from 'axios'
 import Footer from '../components/Footer'
+import {fetchInventory} from '../controllers/getProducts'
 
 export default function Products({products}) {
     const [productsState,setProductsState] = useState(products)
@@ -108,9 +109,7 @@ export default function Products({products}) {
 }
 
 export async function getStaticProps(){
-    const res = await axios.get(`/api/productslist`)
-    const products = await res.data
-  
+    const products = await fetchInventory()
     return {
       props: {
         products

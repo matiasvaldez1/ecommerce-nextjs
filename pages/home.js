@@ -1,11 +1,10 @@
-import handler from "./api/productslist"
-import axios from "axios"
 import Navbar from "../components/Navbar"
 import ProductsGrid from "../components/ProductsGrid"
 import HeroHome from "../components/HeroHome"
 import { useSession } from "next-auth/react"
 import CartContext from "../context/CartContext"
 import Footer from "../components/Footer"
+import { fetchInventory } from "../controllers/getProducts"
 
 export default function App({products}) {
   return (
@@ -18,9 +17,7 @@ export default function App({products}) {
   )
 }
 export async function getStaticProps(){
-  const res = await axios.get(`/api/productslist`)
-  const products = await res.data
-
+  const products = await fetchInventory()
   return {
     props: {
       products

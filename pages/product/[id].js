@@ -2,6 +2,8 @@ import React,{useContext,useState,useEffect} from 'react'
 import axios from 'axios'
 import Navbar from '../../components/Navbar'
 import { CartContext } from '../../context/CartContext';
+import {fetchInventory} from '../../controllers/getProducts'
+import { fetchProduct } from '../../controllers/getProduct';
 
 export default function ProductById({product}) {
     const {AddItemToCart,cartItems} = useContext(CartContext)
@@ -29,8 +31,7 @@ export default function ProductById({product}) {
     )}
 
 export const getStaticPaths = async() =>{
-    const res = await axios(`/api/productslist`)
-    const data = await res.data
+    const data = await fetchInventory()
     const paths = data.map(product =>{return {params:{id:product.id.toString()}}})
     
     return {
@@ -41,8 +42,7 @@ export const getStaticPaths = async() =>{
 
 export const getStaticProps = async(context) =>{
     const id = context.params.id
-    const res = await axios(`/api/product/` + id)
-    const data = await res.data
+    const data = await fetchProduct(id)
 
     return {
         props: {product: data}

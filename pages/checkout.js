@@ -27,7 +27,7 @@ export default function CartPage() {
   return (
         <div className='dark:bg-slate-600 h-screen dark:text-white'>
             <NavBar />
-            <h1 className='text-3xl mx-12 my-12'>Checkout Page</h1>
+            <h1 className='text-3xl mx-12 my-12 sm:my-2'>Checkout Page</h1>
             <div className='flex-col sm:grid sm:grid-cols-4'>
                 <div className='col-span-3 p-4'>
                   {cartItems && cartItems.map(item => {

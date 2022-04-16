@@ -11,7 +11,7 @@ export default function Profile() {
 
     useEffect(() => {
         if(!session){
-            router.push("/home")
+            router.push("/")
         }
     }, [session])
     
@@ -26,7 +26,7 @@ export default function Profile() {
                     <div className='text-center'>
                         <p>{session && session.user.name}</p>
                         <p>{session && session.user.email}</p>
-                        <button onClick={() => signOut({ callbackUrl: `/home` })} className='mt-12 py-2 px-3 bg-red-500 text-white rounded-md'>Log out</button>
+                        <button onClick={() => signOut({ callbackUrl: `/` })} className='mt-12 py-2 px-3 bg-red-500 text-white rounded-md'>Log out</button>
                     </div>
                 </div>
             </div>

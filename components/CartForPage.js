@@ -21,7 +21,7 @@ export default function CartForPage() {
       </div>
       : 
       <div className="bg-red-600 p-2 w-fit m-auto mt-12 text-white hover:opacity-70">
-        <Link href={"/home"}>Go to Home</Link>
+        <Link href={"/"}>Go to Home</Link>
       </div>}
     </div>
   )

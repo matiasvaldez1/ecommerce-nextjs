@@ -11,7 +11,7 @@ export default function Status() {
       Your purchase has been made <a className="font-bold text-green-800">successfully</a>. Thanks you for choosing us.
         </div>
         <div className='flex justify-center animate-pulse'>
-          <button className='bg-green-200 border-2 border-green-500 rounded-sm p-1 hover:opacity-40' onClick={() =>router.push("/home") }>Go back to home</button>
+          <button className='bg-green-200 border-2 border-green-500 rounded-sm p-1 hover:opacity-40' onClick={() =>router.push("/") }>Go back to home</button>
         </div>
     </>
   )

@@ -16,7 +16,7 @@ export default function CartPage() {
     }
     useEffect(() => {
       if(cartItems.length === 0){
-      router.push("/home")}
+      router.push("/")}
     }, [cartItems])
     
     const total = cartItems?.reduce(

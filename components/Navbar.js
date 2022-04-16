@@ -14,11 +14,11 @@ export default function Navbar() {
 	};
   return (
 <div className="flex items-center h-20 px-6 justify-between shadow-sm relative z-50 bg-white dark:bg-slate-800 dark:text-white">
-	<Link href={"/home"}>
+	<Link href={"/"}>
 	<h1 className='flex-1 no-underline block h-8 text-2xl cursor-pointer dark:text-white'>Loudrop <a className='text-red-500'>Store</a></h1>
 	</Link>
 	<div className="flex-none md:flex md:justify-center md:h-full">
-		<Link href={"/home"}>
+		<Link href={"/"}>
 			<a className="h-full flex items-center mx-4 px-2 border-b-2 border-transparent transition-colors duration-300 ease-in-out hover:text-blue-400"> Home</a>
 		</Link>
 		<Link href={"/products"}>

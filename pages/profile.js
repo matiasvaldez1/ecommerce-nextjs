@@ -9,12 +9,12 @@ export default function Profile() {
     const [user,setUser] = useState([])
     const router = useRouter()
 
-/*     useEffect(() => {
+    useEffect(() => {
         if(!session){
             router.push("/")
         }
     }, [session])
-     */
+    
 
 
     return (

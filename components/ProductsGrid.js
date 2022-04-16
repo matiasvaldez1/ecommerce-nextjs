@@ -15,7 +15,7 @@ export default function ProductsGrid({products}) {
     return (
         <div id='products'>
             <h1 className='text-4xl font-medium my-12 sm:ml-12 dark:text-white'><a className='text-red-400 dark:text-red-600'>Some</a> of our products..</h1>
-                <div className='grid grid-cols-4 gap-12 mx-8 mb-32'>
+                <div className='grid sm:grid-cols-4 gap-12 mx-8 mb-32'>
                 {productsMap ? productsMap.map(e =>{
                     return (
                     <CardHome 

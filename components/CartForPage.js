@@ -10,6 +10,7 @@ export default function CartForPage() {
   return (
     <div className='dark:bg-slate-500 dark:text-white h-screen'>
       <Navbar />
+      <div className='mt-12 sm:mt-0'>
       {cartItems.length > 0 ? cartItems.map(item => {
         return <CardCheckout key={item.title} item={item}/>
       })
@@ -23,6 +24,7 @@ export default function CartForPage() {
       <div className="bg-red-600 p-2 w-fit m-auto mt-12 text-white hover:opacity-70">
         <Link href={"/"}>Go to Home</Link>
       </div>}
+      </div>
     </div>
   )
 }

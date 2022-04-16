@@ -7,7 +7,7 @@ export default function Status() {
   return (
     <>
     <NavBar />
-        <div className="bg-green-100 rounded-lg py-5 px-6 text-base text-green-700 mb-3">
+        <div className="bg-green-100 rounded-lg py-5 px-6 text-base text-green-700 mb-3 mt-8 sm:mt-0">
       Your purchase has been made <a className="font-bold text-green-800">successfully</a>. Thanks you for choosing us.
         </div>
         <div className='flex justify-center animate-pulse'>

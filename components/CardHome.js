@@ -5,9 +5,10 @@ import { toast,ToastContainer } from 'react-toastify'
 
 export default function CardHome({title,price,category,image,rate,product,id}) {
   const {AddItemToCart} = useContext(CartContext)
+
   const notify = () =>{
-  toast.success("Success Notification !", {
-    position: toast.POSITION.TOP_CENTER
+  toast.success("Added to cart !", {
+    position: toast.POSITION.BOTTOM_LEFT
   })
 };
 

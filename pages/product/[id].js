@@ -13,7 +13,7 @@ export default function ProductById({product}) {
     return (
         <div className='dark:bg-slate-600 dark:text-white'>
         <Navbar />
-        <div className='w-5/12 m-auto space-y-2 text-lg pb-12'>
+        <div className='w-8/12 mt-16 sm:mt-2 sm:w-5/12 m-auto space-y-2 text-lg pb-12'>
             <h1 className='text-2xl'>{oneProduct.title}</h1>
             <img className='h-full w-full hover:opacity-90' src={oneProduct.image} alt={oneProduct.title}/>
             <p className='underline decoration-red-500'>{oneProduct.category}</p>

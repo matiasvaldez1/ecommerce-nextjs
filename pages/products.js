@@ -87,7 +87,7 @@ export default function Products({products}) {
                 <option value="desAZ">Desc</option>
             </select>
         </div>
-        <div className='grid grid-cols-5 gap-4 m-8'>
+        <div className='grid grid-cols-2 sm:grid-cols-5 gap-4 m-8'>
             {productsState && productsState.map(e => {
                 return (
                     <CardHome 
